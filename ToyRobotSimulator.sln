@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToyRobotSimlator", "ToyRobo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "Interfaces\Contracts.csproj", "{985963D2-FFF8-4DEA-9357-B3B9DAC4FDED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToyRobotSimlatorTests", "ToyRobotSimlatorTests\ToyRobotSimlatorTests.csproj", "{911923EE-CC3E-4D6E-A1DB-43DBB200C75D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{985963D2-FFF8-4DEA-9357-B3B9DAC4FDED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{985963D2-FFF8-4DEA-9357-B3B9DAC4FDED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{985963D2-FFF8-4DEA-9357-B3B9DAC4FDED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{911923EE-CC3E-4D6E-A1DB-43DBB200C75D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{911923EE-CC3E-4D6E-A1DB-43DBB200C75D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{911923EE-CC3E-4D6E-A1DB-43DBB200C75D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{911923EE-CC3E-4D6E-A1DB-43DBB200C75D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

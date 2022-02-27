@@ -7,7 +7,7 @@ namespace ToyRobotSimlator.ToyRobot
 {
     public class Robot : IRobot
     {
-        public IRobotPosition CurrentPosition { get; set; }
+        public IRobotPosition CurrentPosition { get; private set; }
 
         /// <summary>
         /// This method get the position of the robot based on their current position and direction and 
@@ -39,7 +39,7 @@ namespace ToyRobotSimlator.ToyRobot
 
         public void Place(IRobotPosition position)
         {
-            this.CurrentPosition = position;
+            CurrentPosition = position;
         }
 
         public void RotateLeft(int positions)

@@ -67,7 +67,7 @@ namespace ToyRobotSimlator
                     validationMessage = string.Empty;
                     if (position != null && ToyBoard.ValidatePosition(position, out validationMessage))
                     {
-                        ToyRobot.CurrentPosition = position;
+                        ToyRobot.Place(position);
                         return Constants.SuccesfulOperation;
                     }
                     else

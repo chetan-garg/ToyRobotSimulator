@@ -4,7 +4,7 @@ namespace Contracts.Interfaces
 {
     public interface IRobot
     {
-        IRobotPosition CurrentPosition { get; set; }
+        IRobotPosition CurrentPosition { get; }
         void Place(IRobotPosition position);
         IRobotPosition GetNextPosition(int movePlaces);
         void RotateRobot(int rotations);
