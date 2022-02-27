@@ -18,6 +18,12 @@ namespace ToyRobotSimlator
             Rows = rows; Cols = cols; 
         }
 
+        /// <summary>
+        /// Validates whether the new position being set for the robot is a valid position on the board.
+        /// </summary>
+        /// <param name="robotPosition">New position to be set to the robot.</param>
+        /// <param name="validationMessage">Any validation message.</param>
+        /// <returns>Position valid or not</returns>
         public bool ValidatePosition(IRobotPosition robotPosition, out string validationMessage)
         {
             if (robotPosition == null)

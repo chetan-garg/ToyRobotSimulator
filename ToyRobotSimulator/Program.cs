@@ -75,6 +75,9 @@ namespace ToyRobotSimulator
 
         }
 
+        /// <summary>
+        /// This method will resolve all the dependencies for any interfaces required by our classes.
+        /// </summary>
         private static void ResolveDependencies()
         {
             Services = new ServiceCollection().

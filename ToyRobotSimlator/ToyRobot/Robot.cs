@@ -37,20 +37,37 @@ namespace ToyRobotSimlator.ToyRobot
             return newPosition;
         }
 
+        /// <summary>
+        /// This method sets the CurrentPosition to the position object sent by the caller.
+        /// </summary>
+        /// <param name="position">New position to be set to robot.</param>
         public void Place(IRobotPosition position)
         {
             CurrentPosition = position;
         }
 
+        /// <summary>
+        /// Rotates the robot by 90 degress for the number of <paramref name="positions"/> to the left.
+        /// </summary>
+        /// <param name="positions">Number of rotations to turn.</param>
         public void RotateLeft(int positions)
         {
             RotateRobot(0 - positions);
         }
+
+        /// <summary>
+        /// Rotates the robot by 90 degress for the number of <paramref name="positions"/> to the right.
+        /// </summary>
+        /// <param name="positions">Number of rotations to turn.</param>
         public void RotateRight(int positions)
         {
             RotateRobot(positions);
         }
 
+        /// <summary>
+        /// Rotates the robot by 90 degress for the number of <paramref name="positions"/>. The number of rotations can be +ve or -ve driving the direction of rotation.
+        /// </summary>
+        /// <param name="positions">Number of rotations to turn.</param>
         public void RotateRobot(int rotations)
         {
             var directions = (RobotDirection[])Enum.GetValues(typeof(RobotDirection));
