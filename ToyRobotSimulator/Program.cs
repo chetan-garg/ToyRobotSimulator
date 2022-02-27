@@ -19,7 +19,7 @@ namespace ToyRobotSimulator
             commandFormat.AppendLine($"This is a robot simulator for a 6X6 board.\r\n" +
                 $"Following commands can be given to the robot:\r\n\r\n" +
                 $"PLACE - Format \"PLACE X,Y,DIRECTION\" where X and Y are board coordinates " +
-                $"and DIRECTION is the face of the robot.\r\n");
+                $"and DIRECTION is the face of the robot.\r\n Please note there is no space allowed between X,Y,DIRECTION");
             commandFormat.AppendLine($"REPORT - Tells the current position of the robot.");
             commandFormat.AppendLine($"MOVE - Moves the robot one place in the direction it is facing.");
             commandFormat.AppendLine($"LEFT - Rotates the robot LEFT by 90 degress without moving.");
