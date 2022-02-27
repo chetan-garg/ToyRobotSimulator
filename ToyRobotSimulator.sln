@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToyRobotSimulatorConsoleTest", "ToyRobotSimulator\ToyRobotSimulatorConsoleTest.csproj", "{D9BA3748-A1B7-4AE6-9351-EE0EAAFB4D25}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToyRobotSimlator", "ToyRobotSimlator\ToyRobotSimlator.csproj", "{E529CA7C-F9B9-44BB-96D8-897BFB2C31CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "Interfaces\Contracts.csproj", "{985963D2-FFF8-4DEA-9357-B3B9DAC4FDED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D9BA3748-A1B7-4AE6-9351-EE0EAAFB4D25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9BA3748-A1B7-4AE6-9351-EE0EAAFB4D25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9BA3748-A1B7-4AE6-9351-EE0EAAFB4D25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9BA3748-A1B7-4AE6-9351-EE0EAAFB4D25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E529CA7C-F9B9-44BB-96D8-897BFB2C31CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E529CA7C-F9B9-44BB-96D8-897BFB2C31CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E529CA7C-F9B9-44BB-96D8-897BFB2C31CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E529CA7C-F9B9-44BB-96D8-897BFB2C31CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{985963D2-FFF8-4DEA-9357-B3B9DAC4FDED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{985963D2-FFF8-4DEA-9357-B3B9DAC4FDED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{985963D2-FFF8-4DEA-9357-B3B9DAC4FDED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{985963D2-FFF8-4DEA-9357-B3B9DAC4FDED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {59155ADD-1360-4C52-86CF-F9CAD4B50B38}
+	EndGlobalSection
+EndGlobal
