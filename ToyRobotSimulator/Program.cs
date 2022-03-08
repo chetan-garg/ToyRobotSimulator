@@ -81,7 +81,7 @@ namespace ToyRobotSimulator
         private static void ResolveDependencies()
         {
             Services = new ServiceCollection().
-                AddSingleton<IBoard>(new Board(6, 6)).
+                AddSingleton<IBoard>(new Board(8, 8)).
                 AddSingleton<ICommandParser, CommandParser>().
                 AddSingleton<IRobot, Robot>().AddSingleton<RobotOrchestrator>().BuildServiceProvider();
         }

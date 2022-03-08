@@ -41,7 +41,7 @@ namespace ToyRobotSimlator
                     {
                         return Constants.InvalidParametersError;
                     }
-                    var placementPosition = CommandParser.ParsePlacementParametes(commandValues[1].Split(",", StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries));
+                    var placementPosition = CommandParser.ParsePlacementParametes(commandValues[1].Split(",", StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries), ToyRobot);
                     if (placementPosition != null)
                     {
                         if (ToyBoard.ValidatePosition(placementPosition, out validationMessage))

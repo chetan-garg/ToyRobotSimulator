@@ -10,6 +10,6 @@ namespace Contracts.Interfaces
     public interface ICommandParser
     {
         RobotCommandType ParseCommand(string commandInput);
-        IRobotPosition ParsePlacementParametes(string[] inputs);
+        IRobotPosition ParsePlacementParametes(string[] inputs, IRobot toyRobot);
     }
 }

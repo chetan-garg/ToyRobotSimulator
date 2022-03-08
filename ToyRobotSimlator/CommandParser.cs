@@ -28,9 +28,13 @@ namespace ToyRobotSimlator
                 throw new InvalidOperationException(Constants.InvalidCommandErrorMessage);
         }
 
-        public IRobotPosition ParsePlacementParametes(string[] inputs)
+        public IRobotPosition ParsePlacementParametes(string[] inputs, IRobot toyRobot)
         {
-            if (inputs == null || inputs.Length < Constants.ParametersMinLength)
+            if (inputs == null || ((toyRobot == null || toyRobot.CurrentPosition == null) && inputs.Length < Constants.ParametersMinLength))
+            {
+                throw new ArgumentException(Constants.InvalidParametersError);
+            }
+            else if(inputs.Length < Constants.SubsPlaceParamsMinLength)
             {
                 throw new ArgumentException(Constants.InvalidParametersError);
             }
@@ -45,10 +49,19 @@ namespace ToyRobotSimlator
             {
                 throw new ArgumentException(Constants.InvalidParametersError);
             }
+
             RobotDirection direction;
-            if (!Enum.TryParse(inputs[2], true, out direction))
+
+            if (toyRobot.CurrentPosition == null || (inputs.Length == Constants.ParametersMinLength && !string.IsNullOrEmpty(inputs[2])))
             {
-                throw new ArgumentException(Constants.InvalidDirectionError);
+                if (!Enum.TryParse(inputs[2], true, out direction))
+                {
+                    throw new ArgumentException(Constants.InvalidDirectionError);
+                }
+            }
+            else
+            {
+                direction = toyRobot.CurrentPosition.Direction;
             }
 
             return new RobotPosition(x, y, direction);

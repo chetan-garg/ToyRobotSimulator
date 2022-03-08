@@ -25,6 +25,9 @@ namespace ToyRobotSimlator.Tests
         [DataRow(7, 8, 2, false)]
         [DataRow(5, 1, 8, false)]
         [DataRow(2, 1, 1, true)]
+        [DataRow(8, 10, 7, false)]
+        [DataRow(8, 7, 17, false)]
+        [DataRow(8, 10, 10, false)]
         public void ValidatePositionValidTest(int boardLength, int positionX, int positionY, bool expectedOutcome)
         {
             Board newBoard = new Board(boardLength, boardLength);
