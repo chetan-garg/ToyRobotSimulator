@@ -36,6 +36,40 @@ namespace ToyRobotSimlator
 
             switch (command)
             {
+                case RobotCommandType.Avoid:
+                    if (commandValues.Count() < Constants.CommandMinLength)
+                    {
+                        return Constants.InvalidAvoidParametersError;
+                    }
+                    if (ToyRobot.CurrentPosition == null)
+                    {
+                        return Constants.IgnoringCommandMessage;
+                    }
+
+
+                    var successfulAddToObstructedCells = CommandParser.ParseAvoidCommandParameters(commandValues[1].Split(",", StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries), ToyBoard);
+
+                    if (successfulAddToObstructedCells != null)
+                    {
+                        validationMessage = string.Empty;
+                        if (ToyRobot.CurrentPosition.X == successfulAddToObstructedCells.X && ToyRobot.CurrentPosition.Y == successfulAddToObstructedCells.Y)
+                        {
+                            return Constants.ObstructedCellErrorMessage;
+                        }
+
+                        if (ToyRobot.CurrentPosition != null && ToyBoard.ValidatePosition(ToyRobot.CurrentPosition, out validationMessage))
+                        {
+                            ToyBoard.ObstructedCells.Add(successfulAddToObstructedCells);
+                            return Constants.SuccesfulOperation;
+                        }
+                        else
+                        {
+                            return validationMessage;
+                        }
+                    }
+
+                    return string.Empty;
+
                 case RobotCommandType.Place:
                     if (commandValues.Count() < Constants.CommandMinLength)
                     {

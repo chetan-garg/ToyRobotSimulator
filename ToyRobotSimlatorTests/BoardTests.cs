@@ -39,5 +39,25 @@ namespace ToyRobotSimlator.Tests
             Assert.IsNotNull(valid);
             Assert.AreEqual(expectedOutcome, valid);
         }
+
+        [DataTestMethod]
+        [DataRow(8, 5, 5, 5, 5, false)]
+        [DataRow(8, 5, 4, 5, 5, true)]
+        public void ValidatePositionWithObstructionTest(int boardLength, int positionX, int positionY, int obstructedCellX, int obstructedCellY, bool outcome)
+        {
+            Board newBoard = new Board(boardLength, boardLength);
+
+            var mockPosition = new Mock<IRobotPosition>();
+            mockPosition.Setup(x => x.X).Returns(positionX);
+            mockPosition.Setup(y => y.Y).Returns(positionY);
+            newBoard.ObstructedCells.Add(new Contracts.ObstructedCells(obstructedCellX, obstructedCellY));
+            string validationMessage;
+
+            var isValid = newBoard.ValidatePosition(mockPosition.Object, out validationMessage);
+
+            Assert.IsNotNull(isValid);
+            Assert.AreEqual(outcome, isValid);
+        }
+
     }
 }

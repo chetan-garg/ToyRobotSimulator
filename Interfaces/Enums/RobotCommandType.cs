@@ -13,6 +13,7 @@ namespace Contracts.Enums
         Left,
         Right,
         Report,
+        Avoid,
         Exit
     }
 }

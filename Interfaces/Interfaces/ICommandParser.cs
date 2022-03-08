@@ -11,5 +11,7 @@ namespace Contracts.Interfaces
     {
         RobotCommandType ParseCommand(string commandInput);
         IRobotPosition ParsePlacementParametes(string[] inputs, IRobot toyRobot);
+
+        ObstructedCells ParseAvoidCommandParameters(string[] inputs, IBoard board);
     }
 }

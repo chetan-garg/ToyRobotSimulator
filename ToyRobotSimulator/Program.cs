@@ -49,6 +49,7 @@ namespace ToyRobotSimulator
                                 case RobotCommandType.Left:
                                 case RobotCommandType.Right:
                                 case RobotCommandType.Report:
+                                case RobotCommandType.Avoid:
                                     Console.WriteLine(simulator.Process(input));
                                     Console.WriteLine("Please enter next command..");
                                     break;

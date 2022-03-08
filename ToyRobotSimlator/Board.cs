@@ -15,8 +15,11 @@ namespace ToyRobotSimlator
 
         public Board(int rows, int cols)
         {
-            Rows = rows; Cols = cols; 
+            Rows = rows; Cols = cols;
+            ObstructedCells = new List<ObstructedCells>();
         }
+
+        public List<ObstructedCells> ObstructedCells { get; set; }
 
         /// <summary>
         /// Validates whether the new position being set for the robot is a valid position on the board.
@@ -37,6 +40,13 @@ namespace ToyRobotSimlator
                 validationMessage = Constants.InvalidPostionErrorMessage;
                 return false;
             }
+
+            if (ObstructedCells.Exists(x => x.X == robotPosition.X && x.Y == robotPosition.Y))
+            {
+                validationMessage = Constants.ObstructedCellErrorMessage;
+                return false;
+            }
+
             validationMessage = "This is a valid position.";
             return true;
         }

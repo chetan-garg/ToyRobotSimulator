@@ -8,6 +8,10 @@ namespace Contracts.Interfaces
 {
     public interface IBoard
     {
+        int Rows { get; }
+        int Cols { get; }
+
+        List<ObstructedCells> ObstructedCells { get; set; }
         bool ValidatePosition(IRobotPosition robotPosition, out string validationMessage);
     }
 }

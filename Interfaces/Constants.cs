@@ -20,5 +20,9 @@ namespace Contracts
         public const int ParametersMinLength = 3;
         public const string InvalidDirectionError = "The direction value provided is not valid. Valid values are NORTH, EAST, SOUTH OR WEST.";
         public const string SuccesfulOperation = "The command was successfully executed. You can run \"REPORT\" command to see current position.";
+        public const string ObstructedCellErrorMessage = "Ignoring this command as this move will put the robot on an obstructed cell.";
+        public const int AvoidCommandLength = 2;
+        public const string InvalidAvoidParametersError = "It seems AVOID command does not have correct parameters. \r\n The AVOID command format is \"AVOID X,Y\" where X and Y has to be valid integers.";
+        public const string InvalidCoordinatesError = "The X and Y value provided would result in invalid coordinates on the board. Please provide correct values for {0}X{1} board.";
     }
 }

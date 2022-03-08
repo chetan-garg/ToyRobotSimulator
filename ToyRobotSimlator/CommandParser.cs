@@ -66,5 +66,36 @@ namespace ToyRobotSimlator
 
             return new RobotPosition(x, y, direction);
         }
+
+        public ObstructedCells ParseAvoidCommandParameters(string[] inputs, IBoard board)
+        {
+            if (inputs == null || inputs.Length < Constants.AvoidCommandLength)
+            {
+                throw new ArgumentException(Constants.InvalidAvoidParametersError);
+            }
+
+            int x = 0;
+            int y = 0;
+
+            if (!int.TryParse(inputs[0], out x))
+            {
+                throw new ArgumentException(Constants.InvalidAvoidParametersError);
+            }
+
+            if (!int.TryParse(inputs[1], out y))
+            {
+                throw new ArgumentException(Constants.InvalidAvoidParametersError);
+            }
+
+            if (x >= board.Cols || x < 0 || y >= board.Rows || y < 0)
+            {
+                throw new ArgumentException(string.Format(Constants.InvalidCoordinatesError, board.Rows, board.Cols));
+            }
+
+            return new ObstructedCells(x, y);
+
+        }
+
+
     }
 }
